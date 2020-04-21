@@ -109,11 +109,12 @@ function Map(props) {
       });
 
 
-
+      const isMobile = window.screen.width < 500
 
     return (
             <div className='chart-container'>
               <div id='chartdiv'></div>
+               <p id='instructions'>{isMobile ? 'Click' : 'Hover over'} a country for details</p>
               <a href='#news' id='news-arrow-container'>
                 <p id='news-indic'>News</p>
               <div id='arrow'>&#8659;</div>
