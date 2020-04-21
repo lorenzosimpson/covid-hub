@@ -1,38 +1,88 @@
-.App {
+#main-title {
+  font-size: 42px;
+  color: white;
+  font-weight: 800;
+  margin: auto;
+  color: #d18254;
+  padding: 20px 0 0 4%;
+  height: 80px;
+}
+
+.central-content-container {
+  display: flex;
+  height: calc(100vh - 100px);
+  padding-left: 4%;
+  margin: 0 auto;
+}
+
+.stats-container {
+  padding-top: 5%;
+  width: 25%;
+}
+
+.chart-container {
+  width: 85%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#chartdiv {
+  height: 80%;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body.light {
+  background: rgb(228, 228, 228);
+  color: rgb(35, 34, 39)
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.total-cases,.total-deaths {
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #d18254;
+}
+.stats-titles {
+  opacity: 0.5;
+}
+#cases-number, #deaths-number {
+  font-weight: bold;
+  font-size: 38px;
+  opacity: 0.8;
+  margin-bottom: 0;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* news section */
+.news-container {
+  margin: 0 auto;
+  background: #3f3f4f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.news-content {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.individual-article {
+  padding: 2% 0 2% 0;
+}
+
+.article-src {
+  color: #d18254;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.published-at {
+  opacity: 0.5;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.headline {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.article-desc {
+  font-size: 0.8rem;
 }
