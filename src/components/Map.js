@@ -114,7 +114,7 @@ function Map(props) {
     return (
             <div className='chart-container'>
               <div id='chartdiv'></div>
-              <a href='#news'>
+              <a href='#news' id='news-arrow-container'>
                 <p id='news-indic'>News</p>
               <div id='arrow'>&#8659;</div>
               </a>
