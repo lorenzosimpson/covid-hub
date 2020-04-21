@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 
 import Map from './components/Map';
 import News from './components/News';
 import Stats from './components/Stats';
-import Loader from './components/Loader';
-import { render } from '@testing-library/react';
-
 
 
 
