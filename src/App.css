@@ -3,7 +3,6 @@
   color: white;
   font-weight: 800;
   color: white;
-  height: 80px;
 }
 
 .top-container {
@@ -11,8 +10,8 @@
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
-  padding-top: 1%;
-  height: 100px;
+  height: 9vh;
+  padding-top: 1vh;
 }
 
 
@@ -22,7 +21,7 @@
 }
 .central-content-container {
   display: flex;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 10vh);
   margin: 0 auto;
 }
 
@@ -157,8 +156,9 @@ body.light {
     margin: 0 auto;
     display: block;
     padding: 0;
-    padding-top: 3%;
+    padding-top: 1vh;
     width: 80%;
+    height: 19vh;
   }
   #main-title {
     font-size: 3rem;
@@ -177,7 +177,7 @@ body.light {
   }
 
   .central-content-container {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 20vh);
   }
 
   .chart-container {
