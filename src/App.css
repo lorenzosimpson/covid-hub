@@ -185,6 +185,7 @@ body.light {
 
   .central-content-container {
     height: calc(100vh - 25vh);
+    max-height: 450px;
   }
 
   .chart-container {
