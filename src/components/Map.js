@@ -1,5 +1,5 @@
 // Themes begin
-import React, { useEffect } from 'react';
+import React from 'react';
 import {isoCountries} from '../utils/isoCountries';
 
 import * as am4core from "@amcharts/amcharts4/core";
@@ -88,7 +88,11 @@ function Map(props) {
         "max": 40,
         "dataField": "value"
         })
-      
+
+        // chart.events.on("ready", function(ev) {
+        //   chart.zoomToMapObject(polygonSeries.getPolygonById("US"));
+        // });
+        
         imageTemplate.adapter.add("latitude", function(latitude, target) {
         let polygon = polygonSeries.getPolygonById(target.dataItem.dataContext.id);
         if(polygon){
