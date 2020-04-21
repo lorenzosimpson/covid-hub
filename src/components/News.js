@@ -7,7 +7,7 @@ function News(props) {
     const key = '0ef7d455948147d383960c21291ddc78';
 
     useEffect(() => {
-        axios.get(`https://newsapi.org/v2/top-headlines?q=coronavirus&apiKey=${key}`)
+        axios.get(`https://newsapi.org/v2/top-headlines?country=us&q=coronavirus&apiKey=${key}`)
         .then(res => {
             console.log(res)
             setArticles(res.data.articles)
@@ -23,7 +23,7 @@ function News(props) {
     console.log(articles)
 
     return (
-        <div className='news-container'>
+        <div className='news-container' id='news'>
             <div className='news-content'>
             {
                 articles.map(a => (
