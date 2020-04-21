@@ -78,7 +78,7 @@ function Map(props) {
         circle.fillOpacity = 0.7;
         circle.fill = am4core.color('#FA8072')
         //circle.propertyFields.fill = am4core.color('#d15656');
-        circle.tooltipText = "[bold][color:white]{countryName}[/]\n[font-size:12px color:white]total cases: {confirmed}\ntotal deaths: {deaths}\ndate: {date}"
+        circle.tooltipText = "[bold][font-size: 16px]{countryName}[/]\n[font-size:12px color:white]total cases: {confirmed}\ntotal deaths: {deaths}\ndate: {date}"
       
       
         imageSeries.heatRules.push({
@@ -109,11 +109,12 @@ function Map(props) {
       });
 
 
-
+      const isMobile = window.screen.width < 500
 
     return (
             <div className='chart-container'>
               <div id='chartdiv'></div>
+               <p id='instructions'>{isMobile ? 'Click' : 'Hover over'} a country for details</p>
               <a href='#news' id='news-arrow-container'>
                 <p id='news-indic'>News</p>
               <div id='arrow'>&#8659;</div>

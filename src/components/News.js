@@ -25,6 +25,7 @@ function News(props) {
     return (
         <div className='news-container' id='news'>
             <div className='news-content'>
+                <p id='news-header'>COVID-19 News</p>
             {
                 articles.map(a => (
                     <div className='individual-article'>
@@ -36,7 +37,7 @@ function News(props) {
                   )
                 )
             }
-            <p>Powered by News API</p>
+            <p id='powered-by'>Powered by News API</p>
             </div>
         </div>
     );

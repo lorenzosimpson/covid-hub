@@ -2,15 +2,18 @@
   font-size: 48px;
   color: white;
   font-weight: 800;
-  color: #FA8072;
-  height: 80px;
+  color: white;
 }
 
 .top-container {
   display: flex;
   justify-content: space-between;
-  padding: 10px 50px 0 50px;
+  width: 90%;
+  margin: 0 auto;
+  height: 9vh;
+  padding-top: 1vh;
 }
+
 
 .circular-loader {
   margin: 0 auto;
@@ -18,7 +21,7 @@
 }
 .central-content-container {
   display: flex;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 10vh);
   margin: 0 auto;
 }
 
@@ -39,6 +42,7 @@
 
 #chartdiv {
   height: 90%;
+  cursor: pointer;
 }
 
 body.light {
@@ -58,6 +62,7 @@ body.light {
 
 .stats-titles {
   opacity: 0.5;
+  color: whitesmoke;
 }
 #cases-number, #deaths-number {
   font-weight: bold;
@@ -66,9 +71,14 @@ body.light {
   margin-bottom: 0;
 }
 
+#instructions {
+  font-size: 1.2rem;
+  padding-bottom: 3vh;
+  opacity: 0.6;
+}
+
 #news-arrow-container {
   display: flex;
-  padding-top: 20px;
   justify-content: center;
   text-align: center;
   align-items: center ;
@@ -78,6 +88,7 @@ body.light {
 #news-indic {
   color: #FA8072;
   text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
 #arrow {
@@ -112,6 +123,13 @@ body.light {
 .news-content {
   width: 50%;
   margin: 0 auto;
+  padding-top: 3%;
+}
+
+#news-header {
+  font-size: 3rem;
+  font-weight: bold;
+
 }
 
 .individual-article {
@@ -138,3 +156,52 @@ body.light {
   font-size: 1.3rem;
   opacity: 0.8;
 }
+
+
+@media screen and (max-width: 1000px) {
+  .top-container {
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+    padding-top: 1vh;
+    width: 80%;
+    height: 19vh;
+  }
+  #main-title {
+    font-size: 3rem;
+    text-align: center;
+    margin: 0 auto;
+    height: auto;
+    padding-bottom: 1rem;
+  }
+  .stats-container {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  #cases-number,#deaths-number {
+    font-size: 2.5rem;
+  }
+
+  .central-content-container {
+    height: calc(100vh - 20vh);
+  }
+
+  .chart-container {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  #news-arrow-container {
+    padding: 0;
+  }
+
+  .news-content {
+    font-size: 1.5rem;
+    width: 80%;
+  }
+  .article-src {
+    font-size: 1.5rem;
+  }
+
+}
+
