@@ -78,7 +78,7 @@ function Map(props) {
         circle.fillOpacity = 0.7;
         circle.fill = am4core.color('#FA8072')
         //circle.propertyFields.fill = am4core.color('#d15656');
-        circle.tooltipText = "[bold][color:white]{countryName}[/]\n[font-size:12px color:white]total cases: {confirmed}\ntotal deaths: {deaths}\ndate: {date}"
+        circle.tooltipText = "[bold][font-size: 16px]{countryName}[/]\n[font-size:12px color:white]total cases: {confirmed}\ntotal deaths: {deaths}\ndate: {date}"
       
       
         imageSeries.heatRules.push({
