@@ -37,7 +37,9 @@ function News(props) {
                   )
                 )
             }
-            <p id='powered-by'>Powered by News API</p>
+            <a href='https://newsapi.org' target='_blank' rel='noopener noreferrer'>
+                <p id='powered-by'>Powered by News API</p>
+            </a>
             </div>
         </div>
     );
