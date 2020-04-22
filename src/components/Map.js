@@ -109,7 +109,6 @@ function Map(props) {
         return longitude;
       })
       
-      
       });
 
 
@@ -118,7 +117,10 @@ function Map(props) {
     return (
             <div className='chart-container'>
               <div id='chartdiv'></div>
+              <span id='captions-container'>
                <p id='instructions'>{isMobile ? 'Click' : 'Hover over'} a country for details</p>
+               <p id='data-src'>Data: Johns Hopkins University via am4Charts</p>
+               </span>
               <a href='#news' id='news-arrow-container'>
                 <p id='news-indic'>News</p>
               <div id='arrow'>&#8659;</div>

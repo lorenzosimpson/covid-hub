@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
+import ReactGA from 'react-ga';
 
 import Map from './components/Map';
 import News from './components/News';
 import Stats from './components/Stats';
 
-
+ReactGA.initialize('UA-164261436-1')
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends React.Component {
   constructor(props) {
