@@ -10,7 +10,9 @@ function Stats(props) {
     // calculate total cases deaths as of latest info
     const todayData = data[data.length - 1].list
     for (const c of todayData) {
-        totalCases += Number(c.confirmed)
+        if (c.confirmed) {
+            totalCases += Number(c.confirmed)
+        }
         totalDeaths += Number(c.deaths)
     }
 

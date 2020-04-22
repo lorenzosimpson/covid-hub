@@ -47,9 +47,12 @@ function Map(props) {
         
   
         for (const c of mapData) {
-          c.color = chart.colors.getIndex(Math.ceil(Number(c.confirmed) / 100000));
+          // c.color = chart.colors.getIndex(Math.ceil(Number(c.confirmed) / 100000));
           c.countryName = isoCountries[c.id]
           c.date = formatDate(dataDate)
+          if (c.confirmed === 0) {
+            delete c.confirmed
+          }
         }
       
         console.log(covid_world_timeline)
@@ -84,7 +87,7 @@ function Map(props) {
         imageSeries.heatRules.push({
         "target": circle,
         "property": "radius",
-        "min": 6,
+        "min": 2,
         "max": 40,
         "dataField": "value"
         })
