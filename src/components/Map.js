@@ -84,7 +84,7 @@ function Map(props) {
         imageSeries.heatRules.push({
         "target": circle,
         "property": "radius",
-        "min": 3,
+        "min": 6,
         "max": 40,
         "dataField": "value"
         })
