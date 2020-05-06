@@ -17,13 +17,11 @@ function Map(props) {
 
       am4core.ready(function() {
         var covid_world_timeline = window.covid_world_timeline;
-        console.log('world timeline', covid_world_timeline)
       
         var worldLen = covid_world_timeline.length
         var mapData = covid_world_timeline[worldLen - 1].list // Data from the latest day
       
         let chart = am4core.create("chartdiv", am4maps.MapChart);
-        console.log(mapData)
       
         // Set map definition
         chart.geodata = am4geodata_worldLow;
@@ -43,7 +41,6 @@ function Map(props) {
           return `${month}/${day}/${year}`
         }
         const dataDate = covid_world_timeline[worldLen-1].date
-        console.log(dataDate)
         
   
         for (const c of mapData) {
@@ -55,7 +52,6 @@ function Map(props) {
           }
         }
       
-        console.log(covid_world_timeline)
       
         // Create map polygon series
         let polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
@@ -122,7 +118,7 @@ function Map(props) {
               <div id='chartdiv'></div>
               <span id='captions-container'>
                <p id='instructions'>{isMobile ? 'Click' : 'Hover over'} a country for details</p>
-               <p id='data-src'>Data: Johns Hopkins University via am4Charts</p>
+               <p id='data-src'>Data: Johns Hopkins University via amCharts</p>
                </span>
               <a href='#news' id='news-arrow-container'>
                 <p id='news-indic'>News</p>
