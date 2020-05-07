@@ -16,7 +16,6 @@ function Map(props) {
 
       am4core.ready(function() {
         var covid_world_timeline = window.covid_world_timeline;
-        console.log(covid_world_timeline)
       
         var worldLen = covid_world_timeline.length
         var mapData = covid_world_timeline[worldLen - 1].list // Data from the latest day
