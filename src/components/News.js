@@ -8,7 +8,7 @@ function News(props) {
 
     useEffect(() => {
         
-        axios.get(`http://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=us&q=coronavirus&apiKey=${key}`, { headers: {
+        axios.get(`https://newsapi.org/v2/top-headlines?country=us&q=coronavirus&apiKey=${key}`, { headers: {
             'Access-Control-Allow-Origin': '*'
         }})
         .then(res => {

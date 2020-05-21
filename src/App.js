@@ -36,7 +36,7 @@ class App extends React.Component {
             <div class="central-content-container">
               <Map />
             </div>
-            <News />
+            {/* <News /> */}
           </div>
   
       </div>

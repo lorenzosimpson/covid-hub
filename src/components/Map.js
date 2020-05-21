@@ -119,10 +119,10 @@ function Map(props) {
                <p id='instructions'>{isMobile ? 'Click' : 'Hover over'} a country for details</p>
                <p id='data-src'>Data: Johns Hopkins University via amCharts</p>
                </span>
-              <a href='#news' id='news-arrow-container'>
+              {/* <a href='#news' id='news-arrow-container'>
                 <p id='news-indic'>News</p>
               <div id='arrow'>&#8659;</div>
-              </a>
+              </a> */}
             </div>
     );
 }
