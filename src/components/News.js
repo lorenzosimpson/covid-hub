@@ -4,7 +4,7 @@ import moment from 'moment';
 
 function News(props) {
     const [articles, setArticles] = useState([])
-    const key = '0ef7d455948147d383960c21291ddc78';
+    const key = '';
 
     useEffect(() => {
         
