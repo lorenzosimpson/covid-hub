@@ -7,7 +7,7 @@ function News(props) {
     const key = process.env.REACT_APP_API_KEY
 
     useEffect(() => {
-        axios.get('https://newsapi.org/v2/everything?q=coronavirus&from=2020-04-27&sortBy=publishedAt&apiKey=' + key
+        axios.get('https://newsapi.org/v2/everything?q=coronavirus&language=en&from=2020-04-27&sortBy=publishedAt&apiKey=' + key
         )
         .then(res => {
             setArticles(res.data.articles)
