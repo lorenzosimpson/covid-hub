@@ -78,7 +78,6 @@ function Map(props) {
         //circle.propertyFields.fill = am4core.color('#d15656');
         circle.tooltipText = "[bold][font-size: 16px]{countryName}[/]\n[font-size:12px color:white]total cases: {confirmed}\ntotal deaths: {deaths}\ndate: {date}"
       
-      
         imageSeries.heatRules.push({
         "target": circle,
         "property": "radius",
@@ -87,10 +86,6 @@ function Map(props) {
         "dataField": "value"
         })
 
-        // chart.events.on("ready", function(ev) {
-        //   chart.zoomToMapObject(polygonSeries.getPolygonById("US"));
-        // });
-        
         imageTemplate.adapter.add("latitude", function(latitude, target) {
         let polygon = polygonSeries.getPolygonById(target.dataItem.dataContext.id);
         if(polygon){
@@ -119,10 +114,10 @@ function Map(props) {
                <p id='instructions'>{isMobile ? 'Click' : 'Hover over'} a country for details</p>
                <p id='data-src'>Data: Johns Hopkins University via amCharts</p>
                </span>
-              {/* <a href='#news' id='news-arrow-container'>
+              <a href='#news' id='news-arrow-container'>
                 <p id='news-indic'>News</p>
               <div id='arrow'>&#8659;</div>
-              </a> */}
+              </a>
             </div>
     );
 }

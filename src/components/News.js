@@ -4,15 +4,12 @@ import moment from 'moment';
 
 function News(props) {
     const [articles, setArticles] = useState([])
-    const key = '0ef7d455948147d383960c21291ddc78';
+    const key = process.env.REACT_APP_API_KEY
 
     useEffect(() => {
-        
-        axios.get(`https://newsapi.org/v2/top-headlines?country=us&q=coronavirus&apiKey=${key}`, { headers: {
-            'Access-Control-Allow-Origin': '*'
-        }})
+        axios.get('http://newsapi.org/v2/everything?q=coronavirus&from=2020-04-27&sortBy=publishedAt&apiKey=' + key
+        )
         .then(res => {
-            console.log('news api res', res)
             setArticles(res.data.articles)
         })
         .catch(err => {
@@ -23,7 +20,6 @@ function News(props) {
     if (!articles.length) {
         return <p>loading...</p>
     }
-    console.log(articles)
 
     return (
         <div className='news-container' id='news'>
