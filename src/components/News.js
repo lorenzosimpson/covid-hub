@@ -4,6 +4,7 @@ import moment from 'moment';
 
 function News(props) {
     const [articles, setArticles] = useState([])
+    const [error, setError] = useState(false)
     const key = process.env.REACT_APP_API_KEY
 
     useEffect(() => {
@@ -14,12 +15,19 @@ function News(props) {
         })
         .catch(err => {
             console.log(err)
+            setError(true)
         }) 
     }, [])
 
-    if (!articles.length) {
-        return <p>loading...</p>
+    if (error) {
+        return <p className='error'>Could not load news. Please check back later.</p>
     }
+
+    if (!articles.length) {
+        return <p className='error'>Loading...</p>
+    }
+
+   
 
     return (
         <div className='news-container' id='news'>
