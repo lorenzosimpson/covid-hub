@@ -126,7 +126,11 @@ body.light {
 }
 
 
-
+.error {
+  text-align: center;
+  font-size: 2rem;
+  padding: 10px;
+}
 
 /* news section */
 .news-container {
