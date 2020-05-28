@@ -9,7 +9,11 @@ function News(props) {
 
     useEffect(() => {
         axios.get('https://newsapi.org/v2/everything?q=coronavirus&language=en&sortBy=publishedAt&apiKey=' + key
-        )
+        , {
+            headers: {
+                'access-control-allow-origin': '*'
+            }
+        })
         .then(res => {
             setArticles(res.data.articles)
         })
