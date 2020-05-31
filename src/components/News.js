@@ -9,19 +9,18 @@ function News(props) {
 
     useEffect(() => {
         axios.get('https://newsapi.org/v2/everything?q=coronavirus&language=en&sortBy=publishedAt&apiKey=' + key
-        , {
-            headers: {
-                'access-control-allow-origin': '*'
-            }
-        })
+        )
         .then(res => {
+            console.log(res)
             setArticles(res.data.articles)
         })
         .catch(err => {
             console.log(err)
             setError(true)
-        }) 
+        })
+        .finally(() => console.log(error))
     }, [])
+
 
     if (error) {
         return <p className='error'>Could not load news. Please check back later.</p>
