@@ -26,7 +26,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        {/* <Loader loading={this.state.loading} /> */}
         <div class='main-container'>
           <div className='top-container'>
           <p id='main-title'>COVID-19 Global Spread</p>
@@ -36,7 +35,7 @@ class App extends React.Component {
             <div class="central-content-container">
               <Map />
             </div>
-            <News />
+            {/* <News /> */}
           </div>
   
       </div>
