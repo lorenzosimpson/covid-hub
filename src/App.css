@@ -186,9 +186,9 @@ body.light {
     margin: 0 auto;
     display: block;
     padding: 0;
-    padding-top: 1vh;
+    padding-top: 5vh;
     width: 80%;
-    height: 24vh;
+    height: 17vh;
   }
   #main-title {
     font-size: 3rem;
@@ -207,8 +207,7 @@ body.light {
   }
 
   .central-content-container {
-    height: calc(100vh - 25vh);
-    max-height: 450px;
+    height: calc(100vh - 35vh);
   }
 
   .chart-container {

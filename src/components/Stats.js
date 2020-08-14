@@ -1,6 +1,8 @@
 import React from 'react';
 import com from 'comma-number';
 
+import { formatDate, dataDate } from '../formatDate';
+
 function Stats(props) {
 
     const data = window.covid_world_timeline;
