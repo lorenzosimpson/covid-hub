@@ -7,10 +7,13 @@ import * as am4maps from "@amcharts/amcharts4/maps";
 import am4geodata_worldLow from "@amcharts/amcharts4-geodata/worldLow";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 import am4themes_dark from "@amcharts/amcharts4/themes/dark";
+import { formatDate } from '../formatDate'
 
 am4core.useTheme(am4themes_animated);
 am4core.useTheme(am4themes_dark);
 // Themes end
+
+
 
 function Map(props) {
 
@@ -31,14 +34,14 @@ function Map(props) {
         // create a color object property for each country based on confirmed cases
         // add country name
       
-        const formatDate = function(date) {
-          const arr = date.split('-')
-          const year = arr[0]
-          const month = arr[1]
-          const day = arr[2]
+        // const formatDate = function(date) {
+        //   const arr = date.split('-')
+        //   const year = arr[0]
+        //   const month = arr[1]
+        //   const day = arr[2]
         
-          return `${month}/${day}/${year}`
-        }
+        //   return `${month}/${day}/${year}`
+        // }
         const dataDate = covid_world_timeline[worldLen-1].date
         
   
@@ -76,7 +79,7 @@ function Map(props) {
         circle.fillOpacity = 0.7;
         circle.fill = am4core.color('#FA8072')
         //circle.propertyFields.fill = am4core.color('#d15656');
-        circle.tooltipText = "[bold][font-size: 16px]{countryName}[/]\n[font-size:12px color:white]total cases: {confirmed}\ntotal deaths: {deaths}\ndate: {date}"
+        circle.tooltipText = "[bold][font-size: 16px]{countryName}[/]\n[font-size:12px color:white]total cases: {confirmed}\ntotal deaths: {deaths}"
       
         imageSeries.heatRules.push({
         "target": circle,
