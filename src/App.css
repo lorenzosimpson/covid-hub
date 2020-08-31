@@ -45,10 +45,7 @@
   cursor: pointer;
 }
 
-body.light {
-  background: rgb(228, 228, 228);
-  color: rgb(35, 34, 39)
-}
+
 
 .stats-container {
   display: flex;
@@ -62,7 +59,7 @@ body.light {
 }
 
 .stats-titles {
-  opacity: 0.5;
+  opacity: 0.8;
   color: whitesmoke;
 }
 #cases-number, #deaths-number {
